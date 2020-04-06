@@ -16,6 +16,15 @@ repositories {
     jcenter()
 }
 
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.google.devrel.gmscore.tools.apk.arsc.ArscDumper'
+        )
+    }
+}
+
 dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:21.0'
