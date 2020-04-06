@@ -66,3 +66,6 @@ limitations under the License.
 # Disclaimer
 
 This is not an official Google product
+
+# convert
+use `gradle init --type java-library` to init as a java project, then add dependency case by case
