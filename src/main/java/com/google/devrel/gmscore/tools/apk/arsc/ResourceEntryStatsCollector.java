@@ -174,7 +174,11 @@ public class ResourceEntryStatsCollector {
       // The 1 here is to convert back to a 1-based index.
       TypeSpecChunk typeSpec = packageChunk.getTypeSpecChunk(i + 1);
       // TypeSpecChunk entries share everything equally.
-      addSizes(usages[i], typeSpec.getOriginalChunkSize(), 0, 1);
+      int size = 0;
+      if(typeSpec != null){
+        size = typeSpec.getOriginalChunkSize();
+      }
+      addSizes(usages[i], size , 0, 1);
     }
   }
 

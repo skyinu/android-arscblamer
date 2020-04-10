@@ -199,7 +199,7 @@ public class PackageChunk extends ChunkWithChunks {
 
   /** For a given (1-based) type id, returns the {@link TypeSpecChunk} matching it. */
   public TypeSpecChunk getTypeSpecChunk(int id) {
-    return Preconditions.checkNotNull(typeSpecs.get(id));
+    return typeSpecs.get(id);
   }
 
   /**
